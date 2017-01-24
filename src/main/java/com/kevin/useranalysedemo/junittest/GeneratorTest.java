@@ -31,7 +31,9 @@ public class GeneratorTest {
 //			System.out.println("生成随机省份"+i + " " + provinceIdGenerator.generate() );
 //			System.out.println("生成随机事件"+i + " " + Arrays.toString( eventIdGenerator.generate() )  );
 			
-			System.out.println("生成随机时间"+i + " " + Arrays.toString( dateGenerator.generateStatDate(5, "2016-12-01") )  );
+			String [] tmp = dateGenerator.generateDays(2016, 12, 31);
+			Arrays.sort(tmp);
+			System.out.println("生成随机时间"+i + " " + Arrays.toString( tmp ) );
 		}		
 	}	
 	

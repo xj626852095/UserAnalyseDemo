@@ -84,8 +84,11 @@ public class Event {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	
-	
-	
+	@Override
+	public String toString() {
+		return "Event [userId=" + userId + ", userName=" + userName + ", provinceId=" + provinceId + ", provinceName="
+				+ provinceName + ", age=" + age + ", eventId=" + eventId + ", eventName=" + eventName + ", statDate="
+				+ statDate + ", productName=" + productName + "]";
+	}
 	
 }

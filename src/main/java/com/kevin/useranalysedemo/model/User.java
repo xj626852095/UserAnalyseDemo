@@ -47,6 +47,11 @@ public class User {
 	}
 	public void setProvinceName(String provinceName) {
 		this.provinceName = provinceName;
+	}
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", userName=" + userName + ", provinceId=" + provinceId + ", provinceName="
+				+ provinceName + ", age=" + age + "]";
 	}	
 	
 }
