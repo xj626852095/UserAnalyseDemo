@@ -10,6 +10,7 @@ import com.kevin.useranalysedemo.utils.generator.ChineseMobileNumberGenerator;
 import com.kevin.useranalysedemo.utils.generator.ChineseNameGenerator;
 import com.kevin.useranalysedemo.utils.generator.DateGenerator;
 import com.kevin.useranalysedemo.utils.generator.EventIdGenerator;
+import com.kevin.useranalysedemo.utils.generator.ProductNameGenerator;
 import com.kevin.useranalysedemo.utils.generator.ProvinceIdGenerator;
 
 public class GeneratorTest {
@@ -22,6 +23,7 @@ public class GeneratorTest {
 		ProvinceIdGenerator provinceIdGenerator = ProvinceIdGenerator.getInstance();
 		EventIdGenerator eventIdGenerator = EventIdGenerator.getInstance();
 		DateGenerator dateGenerator = DateGenerator.getInstance();
+		ProductNameGenerator productNameGenerator = ProductNameGenerator.getInstance();
 		 
 		for(int i=0; i<10; i++){
 //			System.out.println("生成随机UUID "+i + " " + UUID.randomUUID() );
@@ -31,9 +33,11 @@ public class GeneratorTest {
 //			System.out.println("生成随机省份"+i + " " + provinceIdGenerator.generate() );
 //			System.out.println("生成随机事件"+i + " " + Arrays.toString( eventIdGenerator.generate() )  );
 			
-			String [] tmp = dateGenerator.generateDays(2016, 12, 31);
-			Arrays.sort(tmp);
-			System.out.println("生成随机时间"+i + " " + Arrays.toString( tmp ) );
+//			String [] tmp = dateGenerator.generateDays(2016, 12, 31);
+//			Arrays.sort(tmp);
+//			System.out.println("生成随机时间"+i + " " + Arrays.toString( tmp ) );
+			
+			System.out.println( productNameGenerator.generate() );
 		}		
 	}	
 	

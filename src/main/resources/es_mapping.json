@@ -1,0 +1,43 @@
+put /user_analysys
+
+PUT /user_analysys/_mapping/user_event  
+{  
+  "properties" : {  
+    "userId" : {  
+      "type" :    "string",  
+      "index":    "not_analyzed"  
+    },
+    "userName" : {  
+      "type" :    "string",  
+      "index":    "not_analyzed"  
+    }, 
+    "provinceId" : {  
+      "type" :    "long",  
+      "index":    "not_analyzed"  
+    },
+    "provinceName" : {  
+      "type" :    "string",  
+      "index":    "not_analyzed"  
+    }, 
+    "age" : {  
+      "type" :    "long",  
+      "index":    "not_analyzed"  
+    }, 
+    "eventId" : {  
+      "type" :    "long",  
+      "index":    "not_analyzed"  
+    }, 
+    "eventName" : {  
+      "type" :    "string",  
+      "index":    "not_analyzed"  
+    }, 
+    "statDate" : {  
+      "type" :    "long",  
+      "index":    "not_analyzed"  
+    }, 
+    "productName" : {  
+      "type" :    "string",  
+      "index":    "analyzed"  
+    } 
+  }  
+}  

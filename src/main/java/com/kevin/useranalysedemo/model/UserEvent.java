@@ -2,7 +2,7 @@ package com.kevin.useranalysedemo.model;
 
 import java.util.Date;
 
-public class Event {
+public class UserEvent {
 	
 	private String userId;
 	private String userName;
@@ -17,7 +17,7 @@ public class Event {
 	
 	
 	
-	public Event(String userId, String userName, int provinceId, String provinceName, int age, int eventId,
+	public UserEvent(String userId, String userName, int provinceId, String provinceName, int age, int eventId,
 			String eventName, Date statDate, String productName) {
 		super();
 		this.userId = userId;

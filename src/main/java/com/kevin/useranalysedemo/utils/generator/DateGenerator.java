@@ -58,7 +58,7 @@ public class DateGenerator {
     
     /**
      * cnt 为返回的个数
-     * startDate 为年月日
+     * startDate 为yyyy-MM-dd年月日
      * @return 返回 cnt 个统计时间， 而且时间为递增的
      */
     public String[] generateStatDate(int cnt, String dateStr) { 
