@@ -1,4 +1,4 @@
-package com.kevin.useranalysedemo.mr.mapper;
+package com.kevin.useranalysedemo.mr.Reducer;
 
 import java.io.IOException;
 
@@ -11,7 +11,12 @@ public class UserIntersectionReducer extends Reducer<Text, Text, Text, Text> {
 	protected void reduce(Text key, Iterable<Text> values, Reducer<Text, Text, Text, Text>.Context context)
 			throws IOException, InterruptedException {
 		
-		context.write(key, key);
+		Text oneValue = new Text();
+		for(Text value : values){
+			oneValue = value;
+		}
+		
+		context.write(key, oneValue);
 		
 	}
 	

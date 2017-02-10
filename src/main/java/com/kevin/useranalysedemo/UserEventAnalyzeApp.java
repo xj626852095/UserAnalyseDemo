@@ -13,11 +13,11 @@ import org.apache.log4j.Logger;
 import org.apache.velocity.VelocityContext;
 import org.elasticsearch.hadoop.mr.EsInputFormat;
 
+import com.kevin.useranalysedemo.mr.Reducer.EsUserEventReducer;
+import com.kevin.useranalysedemo.mr.Reducer.UserIntersectionReducer;
 import com.kevin.useranalysedemo.mr.mapper.EsCompanyMapper;
 import com.kevin.useranalysedemo.mr.mapper.EsUserEventMapper;
-import com.kevin.useranalysedemo.mr.mapper.EsUserEventReducer;
 import com.kevin.useranalysedemo.mr.mapper.UserIntersectionMapper;
-import com.kevin.useranalysedemo.mr.mapper.UserIntersectionReducer;
 import com.kevin.useranalysedemo.utils.DateUtils;
 import com.kevin.useranalysedemo.utils.PropertyUtil;
 import com.kevin.useranalysedemo.utils.VelocityUtils;
@@ -58,8 +58,8 @@ public class UserEventAnalyzeApp {
 			logger.info(" esQdl = \n" + esQdl);
 		}
 		
-		//通过es-hadoop 将es的查询结果导入到hadoop 中
-		        
+		//通过es-hadoop 将es的查询结果导入到hadoop 中		
+		
 //        String nowStr = DateUtils.getNowStr(null);
 //        for(int i=0; i<esQdls.size(); i++){
 //        	String esQdl = esQdls.get(i);  
@@ -109,7 +109,7 @@ public class UserEventAnalyzeApp {
         job.setNumReduceTasks(1);
         
         //指定要处理的原始数据所存放的路径          
-        FileInputFormat.setInputPaths(job, new Path("F:/mr-fs/20170210135217/0/query_result"));  
+        FileInputFormat.setInputPaths(job, new Path("F:/mr-fs/20170210135217/0/query_result"), new Path("F:/mr-fs/20170210135217/1/query_result"));  
       
         //指定处理之后的结果输出到哪个路径           
         FileOutputFormat.setOutputPath(job, new Path("F:/mr-fs/temp/out"));  

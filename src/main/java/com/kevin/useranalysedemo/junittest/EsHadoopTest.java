@@ -9,8 +9,8 @@ import org.elasticsearch.hadoop.mr.EsInputFormat;
 import org.elasticsearch.hadoop.mr.EsOutputFormat;
 import org.elasticsearch.hadoop.mr.LinkedMapWritable;
 
+import com.kevin.useranalysedemo.mr.Reducer.EsCompanyReducer;
 import com.kevin.useranalysedemo.mr.mapper.EsCompanyMapper;
-import com.kevin.useranalysedemo.mr.mapper.EsCompanyReducer;
 
 public class EsHadoopTest {
 	

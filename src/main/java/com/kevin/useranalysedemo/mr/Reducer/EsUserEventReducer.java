@@ -1,4 +1,4 @@
-package com.kevin.useranalysedemo.mr.mapper;
+package com.kevin.useranalysedemo.mr.Reducer;
 
 import java.io.IOException;
 
