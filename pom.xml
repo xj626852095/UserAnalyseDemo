@@ -77,6 +77,45 @@
 	    <version>3.5</version>
 	</dependency>
     
+    
+    <!-- hadoop -->
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-common</artifactId>
+        <version>2.7.3</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-hdfs</artifactId>
+        <version>2.7.3</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.hadoop</groupId>
+        <artifactId>hadoop-client</artifactId>
+        <version>2.7.3</version>
+    </dependency>
+
+	<dependency>
+		<groupId>jdk.tools</groupId>
+		<artifactId>jdk.tools</artifactId>
+		<version>1.8</version>
+		<scope>system</scope>
+		<systemPath>${JAVA_HOME}/lib/tools.jar</systemPath>
+	</dependency>
+
+	<dependency>
+		<groupId>org.elasticsearch</groupId>
+		<artifactId>elasticsearch-hadoop</artifactId>
+		<version>5.1.1</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.velocity</groupId>
+		<artifactId>velocity</artifactId>
+		<version>1.7</version>
+	</dependency>
+	
+    
   </dependencies>
   
   <build>
@@ -86,8 +125,8 @@
 			<artifactId>maven-compiler-plugin</artifactId>
 			<version>2.1</version>
 			<configuration>
-				<source>1.8</source>
-				<target>1.8</target>
+				<source>1.7</source>
+				<target>1.7</target>
 			</configuration>
 		</plugin>
 	</plugins>

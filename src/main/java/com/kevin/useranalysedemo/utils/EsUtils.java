@@ -15,12 +15,11 @@ import org.elasticsearch.xpack.client.PreBuiltXPackTransportClient;
 
 public class EsUtils {
 	
-	public static final String INDEX_NAME = "user_analysys";
-	public static final String TYPE_NAME = "user_event";
-	//public static final String CLUSTER_NAME = "es_cluster_jf9599";
-	public static final String CLUSTER_NAME = "elasticsearch";
-	public static final String ES_SERVER_HOST = "localhost";
-	public static final int ES_SERVER_PORT = 9300;
+	public static final String INDEX_NAME = PropertyUtil.getInstance().getString("es.default.index.name");
+	public static final String TYPE_NAME = PropertyUtil.getInstance().getString("es.default.type.name");
+	public static final String CLUSTER_NAME = PropertyUtil.getInstance().getString("es.cluster.name");	
+	public static final String ES_SERVER_HOST = PropertyUtil.getInstance().getString("es.server.host");
+	public static final int ES_SERVER_PORT = Integer.parseInt(PropertyUtil.getInstance().getString("es.server.port"));
 	
 	private static TransportClient  client;
 	
@@ -28,10 +27,10 @@ public class EsUtils {
 		Settings settings = Settings.builder()
 		        .put("cluster.name", CLUSTER_NAME)//指定集群名称
 		        .put("client.transport.sniff", true)//探测集群中机器状态
-		        //.put("xpack.security.user","elastic:changeme")
+		        .put("xpack.security.user","elastic:changeme")
 		        .build();		
-		//client = new PreBuiltXPackTransportClient(settings);
-		client = new PreBuiltTransportClient(settings);
+		client = new PreBuiltXPackTransportClient(settings);
+		//client = new PreBuiltTransportClient(settings);
 		
 		try {
 			client.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName(ES_SERVER_HOST), ES_SERVER_PORT));

@@ -1,0 +1,21 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {"range": {
+          "statDate": {
+            "gte": "${esQueryStartDate}",
+            "lte": "${esQueryEndDate}"
+          }
+        }},
+        {
+          "term": {
+            "eventId": {
+              "value": ${esQueryEventId}
+            }
+          }
+        }
+      ]
+    }
+  }
+}

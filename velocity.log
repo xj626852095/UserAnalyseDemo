@@ -1,0 +1,71 @@
+2017-02-10 09:41:15,942 - Problem instantiating the template loader: org.apache.Velocity.runtime.resource.loader.ClasspathResourceLoader.
+Look at your properties file and make sure the
+name of the template loader is correct.
+java.lang.ClassNotFoundException: org.apache.Velocity.runtime.resource.loader.ClasspathResourceLoader
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:86)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:105)
+	at org.apache.velocity.runtime.resource.loader.ResourceLoaderFactory.getLoader(ResourceLoaderFactory.java:46)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.initialize(ResourceManagerImpl.java:130)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeResourceManager(RuntimeInstance.java:730)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:263)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:678)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:238)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:86)
+	at com.kevin.useranalysedemo.junittest.VelocityTest.main(VelocityTest.java:17)
+2017-02-10 09:42:11,889 - Problem instantiating the template loader: org.apache.Velocity.runtime.resource.loader.ClasspathResourceLoader.
+Look at your properties file and make sure the
+name of the template loader is correct.
+java.lang.ClassNotFoundException: org.apache.Velocity.runtime.resource.loader.ClasspathResourceLoader
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:86)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:105)
+	at org.apache.velocity.runtime.resource.loader.ResourceLoaderFactory.getLoader(ResourceLoaderFactory.java:46)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.initialize(ResourceManagerImpl.java:130)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeResourceManager(RuntimeInstance.java:730)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:263)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:678)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:238)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:86)
+	at com.kevin.useranalysedemo.junittest.VelocityTest.main(VelocityTest.java:17)
+2017-02-10 09:42:25,081 - Problem instantiating the template loader: org.apache.Velocity.runtime.resource.loader.ClasspathResourceLoader.
+Look at your properties file and make sure the
+name of the template loader is correct.
+java.lang.ClassNotFoundException: org.apache.Velocity.runtime.resource.loader.ClasspathResourceLoader
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:190)
+	at org.apache.velocity.util.ClassUtils.getClass(ClassUtils.java:86)
+	at org.apache.velocity.util.ClassUtils.getNewInstance(ClassUtils.java:105)
+	at org.apache.velocity.runtime.resource.loader.ResourceLoaderFactory.getLoader(ResourceLoaderFactory.java:46)
+	at org.apache.velocity.runtime.resource.ResourceManagerImpl.initialize(ResourceManagerImpl.java:130)
+	at org.apache.velocity.runtime.RuntimeInstance.initializeResourceManager(RuntimeInstance.java:730)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:263)
+	at org.apache.velocity.runtime.RuntimeInstance.init(RuntimeInstance.java:678)
+	at org.apache.velocity.runtime.RuntimeSingleton.init(RuntimeSingleton.java:238)
+	at org.apache.velocity.app.Velocity.init(Velocity.java:86)
+	at com.kevin.useranalysedemo.junittest.VelocityTest.main(VelocityTest.java:18)
+2017-02-10 10:00:30,028 - Exception calling reference $name at velocity_vm/hello.vm[line 1, column 13]
+2017-02-10 10:00:48,206 - Exception calling reference $name at velocity_vm/hello.vm[line 1, column 13]
